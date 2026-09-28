@@ -1,0 +1,17 @@
+[project]
+name = "unsafe-iss-mcp-testfixture"
+version = "0.1.0"
+description = "Inert MCP security test fixture — a 'who is in space' server that trips a scanner's data-exfiltration finding via tool-poisoning docstrings, with no harmful code."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.2.0",
+    "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+py-modules = ["server"]
